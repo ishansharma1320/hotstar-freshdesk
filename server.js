@@ -88,9 +88,9 @@ const saveTickets = (ticketData)=>{
     })
 
 }
-const exec = (extra=null)=>{
+const exec = (extra=null,date)=>{
     let page = undefined;
-    let params = {"updated_since":"2022-03-15T00:00:00Z",'include': 'description,requester'}
+    let params = {"updated_since":date,'include': 'description,requester'}
     if(extra !== null){
         if (extra.pageIsLast === false){
             let myRegexp = /page=(.*)>/;
@@ -118,7 +118,7 @@ const exec = (extra=null)=>{
             })
         
         });
-        exec(extra);
+        exec(extra,date);
     }else{
         console.error(err);
     }
@@ -128,5 +128,10 @@ const exec = (extra=null)=>{
 
 app.listen(PORT, function () {
     console.log('server started at port : '+PORT);
-    exec();
+    let date = new Date();
+    // setTimeout(() => {
+//     let date = new Date();
+//     console.log('execute');
+//     exec(null,date);
+// }, 60000);
 });

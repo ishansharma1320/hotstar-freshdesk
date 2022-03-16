@@ -1,0 +1,17 @@
+{
+  "name": "hotstar-freshdesk-api",
+  "version": "1.0.0",
+  "description": "Playground for API Testing for Freshdesk API for hotstar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "express": "^4.17.3",
+    "freshdesk-api": "^2.15.0",
+    "mongoose": "^6.2.6"
+  }
+}

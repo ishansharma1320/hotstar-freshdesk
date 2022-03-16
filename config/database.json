@@ -1,0 +1,9 @@
+{
+    "development": {
+        "host": "127.0.0.1",
+        "username": "ishan",
+        "password": "omnitraq",
+        "db": "hotstar",
+        "port": "3003"
+      }
+}

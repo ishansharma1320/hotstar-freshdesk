@@ -114,17 +114,25 @@ const saveTickets = (ticketData)=>{
             let newUpdAt = new Date(ticketData.updated_at);
             let newConversations = [];
             // console.debug("Ticket Data Conversations: ",ticketData.conversations);            
+            // Filteration of new conversations starts
+            // This is not working for updating conversations, check ticket 821094, 62029079446, 
+            // reason -- when ticket is updated, somehow conversation param(updated_at) is not updated 
+            // but ticket param(updated_at) is updated. 
             ticketData.conversations.forEach((element)=>{
                 let elUpdAt = new Date(element.updated_at);
-                if(elUpdAt > prevUpdAt && elUpdAt <=newUpdAt){
+                if(elUpdAt >= prevUpdAt && elUpdAt <=newUpdAt){
                     newConversations.push(element);
                 }
             })
+            // Filteration of new conversations ends
+
+
+
             console.debug("Ticket Data Conversations: ",ticketData.conversations.length);  
-            console.debug("New Conversations: ",newConversations);
+            console.debug("New Conversations: ",newConversations.length);
             let lastDescription = res.freshdesk_description_text[res.freshdesk_description_text.length -1].description_text;
-            // console.log(lastDescription);
-            // console.log(ticketData.description_text);
+            
+            // check for ticket changes
             if(lastDescription !== ticketData.description_text){
                 res.freshdesk_description.push({updated_at: newUpdAt,description: ticketData.description})
                 res.freshdesk_description_text.push({updated_at: newUpdAt,description_text: ticketData.description_text})   
@@ -149,10 +157,10 @@ const saveTickets = (ticketData)=>{
 
                     if(prevConvBody !== newConv.body){
                         commonConv.body.push({updated_at: newConv.updated_at,body: newConv.body});
-                        commonConv.body_text.push({updated_at: newConv.updated_at,body: newConv.body_text});
+                        commonConv.body_text.push({updated_at: newConv.updated_at,body_text: newConv.body_text});
                     }
                     if(prevConvAttachment !== newConv.attachments){
-                        commonConv.attachments.push({updated_at: newConv.updated_at,body: newConv.attachments});
+                        commonConv.attachments.push({updated_at: newConv.updated_at,attachments: newConv.attachments});
                     }
                     //delete processedId
                     finalConversations.push(commonConv)
@@ -162,9 +170,9 @@ const saveTickets = (ticketData)=>{
                     let body_text = newConv.body_text;
                     let attachments = newConv.attachments;
 
-                    newConv.body = [{updated_at: newConv.updated_at,body}]
-                    newConv.body_text = [{updated_at: newConv.updated_at,body_text}]
-                    newConv.attachments = [{updated_at: newConv.updated_at,attachments}]
+                    newConv.body = [{updated_at: newConv.updated_at,body: body}]
+                    newConv.body_text = [{updated_at: newConv.updated_at,body_text: body_text}]
+                    newConv.attachments = [{updated_at: newConv.updated_at,attachments: attachments}]
                     finalConversations.push(newConv)
                 }
             }
@@ -173,8 +181,11 @@ const saveTickets = (ticketData)=>{
             ticketData.description_text = res.freshdesk_description_text;
             if (finalConversations.length > 0){
                 console.log("New Conversations");
-                ticketData.conversations = finalConversations;
+                ticketData.conversations = res.freshdesk_conversations.concat(finalConversations);
+            }else{
+                ticketData.conversations = res.freshdesk_conversations;
             } 
+            console.log(finalConversations.length);
             console.log(ticketData.conversations.length);
             let newTicketObj = createTicketObject(ticketData,'update');
             

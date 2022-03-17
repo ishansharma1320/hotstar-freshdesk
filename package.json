@@ -9,9 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "bluebird": "^3.7.2",
     "express": "^4.17.3",
     "freshdesk-api": "^2.15.0",
-    "mongoose": "^6.2.6"
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.6",
+    "unirest": "^0.6.0"
   }
 }

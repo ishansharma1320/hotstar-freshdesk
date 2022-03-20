@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const _ = require('lodash');
 const config = require('./config/database');
+const utils = require('./utils');
+const listAllConversations = utils.listAllConversations;
 const dev = config.development;
 const PORT = dev.port;
 const Ticket = require('./models/freshDeskTickets');
@@ -221,16 +223,23 @@ const exec = (extra=null,date)=>{
         // console.log(extra);
         
         data.forEach((ticket) => {
-            freshdesk.listAllConversations(ticket.id,(err,convData)=>{
-                if(!err){
-                    // console.log(Object.keys(convData[0]));
-                    ticket.conversations = convData;
-                    saveTickets(ticket);
-                }else{
-                    console.error("List All Conversations");
-                    console.error(err);
-                }                    
+            const convParams = {'per_page':100,'page':1}
+            listAllConversations(ticket.id,convParams).then((convData)=>{
+                ticket.conversations = convData;
+                saveTickets(ticket);
+            }).catch(err=>{
+                console.error("List All Conversations");
+                console.error(err);
             })
+            // freshdesk.listAllConversations(ticket.id,(err,convData)=>{
+            //     if(!err){
+            //         // console.log(Object.keys(convData[0]));
+                    
+            //     }else{
+            //         console.error("List All Conversations");
+            //         console.error(err);
+            //     }                    
+            // })
         
         });
         exec(extra,date);

@@ -87,6 +87,9 @@ const saveTickets = (ticketData)=>{
                 ticketData.conversations[i].body = [{updated_at: ticketData.conversations[i].updated_at,body}]
                 ticketData.conversations[i].body_text = [{updated_at: ticketData.conversations[i].updated_at,body_text}]
                 ticketData.conversations[i].attachments = [{updated_at: ticketData.conversations[i].updated_at,attachments}]
+                if('incoming' in ticketData.conversations[i]){
+                    ticketData.conversations[i].speaker = ticketData.conversations[i].incoming === true?'right':'left';
+                }
             }
 
             let newTicket = createTicketObject(ticketData,'create');
@@ -184,8 +187,13 @@ const saveTickets = (ticketData)=>{
             }else{
                 ticketData.conversations = res.freshdesk_conversations;
             } 
-            console.log(finalConversations.length);
-            console.log(ticketData.conversations.length);
+            for(let i = 0;i<ticketData.conversations.length;i++){
+                if(('incoming' in ticketData.conversations[i]) && !('speaker' in ticketData.conversations[i])){
+                    ticketData.conversations[i].speaker = ticketData.conversations[i].incoming === true?'right':'left';
+                }
+            }
+            // console.log(finalConversations.length);
+            // console.log(ticketData.conversations.length);
             let newTicketObj = createTicketObject(ticketData,'update');
             
             console.log(newTicketObj.freshdesk_conversations.length);

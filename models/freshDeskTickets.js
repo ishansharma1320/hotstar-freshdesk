@@ -80,7 +80,8 @@ var ticketSchema = new mongoose.Schema({
         automation_type_id:Number,
         auto_response:Boolean,
         ticket_id:Number,
-        source_additional_info:mongoose.Mixed
+        source_additional_info:mongoose.Mixed,
+        speaker: String,
     }]
 });
 

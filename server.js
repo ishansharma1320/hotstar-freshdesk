@@ -11,18 +11,6 @@ const Freshdesk = require('freshdesk-api');
 const freshdesk = new Freshdesk('https://starstaging.freshdesk.com/','CncVtKH3Bw0gnXag8R');
 
 
-const MONGO_URI = 'mongodb://'+ dev.username + ':' + dev.password + '@' + dev.host + '/' + dev.db
-mongoose.connect(MONGO_URI,{
-  useNewUrlParser: true,
-    useUnifiedTopology:true
-})
-.then(()=>{
-  console.log("Connected to Database");
-}).catch(()=>{
-  console.error("Could not Connect to Database");
-});
-
-const app = express();
 
 const createTicketObject = (ticketData,op)=>{
     let newTicket;
@@ -115,6 +103,7 @@ const saveTickets = (ticketData)=>{
             let prevUpdAt = res.freshdesk_updated_at;
             let newUpdAt = new Date(ticketData.updated_at);
             let newConversations = [];
+            
             // console.debug("Ticket Data Conversations: ",ticketData.conversations);            
             // Filteration of new conversations starts
             // This is not working for updating conversations, check ticket 821094, 62029079446, 
@@ -133,7 +122,7 @@ const saveTickets = (ticketData)=>{
             console.debug("Ticket Data Conversations: ",ticketData.conversations.length);  
             console.debug("New Conversations: ",newConversations.length);
             let lastDescription = res.freshdesk_description_text[res.freshdesk_description_text.length -1].description_text;
-            
+            console.log(lastDescription);
             // check for ticket changes
             if(lastDescription !== ticketData.description_text){
                 res.freshdesk_description.push({updated_at: newUpdAt,description: ticketData.description})
@@ -154,20 +143,26 @@ const saveTickets = (ticketData)=>{
                 console.log("Inside Loop");
                 if(processedIds.includes(newConv.id)){    
                     let commonConv = res.freshdesk_conversations.filter(element => newConv.id === element.id);
-                    let prevConvBody = commonConv.body[commonConv.body.length-1].body;
-                    let prevConvAttachment = commonConv.body[commonConv.body.length-1].attachments;
-
+                    
+                    let prevConvBody = commonConv[commonConv.length-1].body;
+                    prevConvBody = prevConvBody[prevConvBody.length-1].body;
+                    
+                    let prevConvAttachment = commonConv[commonConv.length-1].attachments;
+                    prevConvAttachment = prevConvAttachment[prevConvAttachment.length-1].attachments;
+                    
                     if(prevConvBody !== newConv.body){
-                        commonConv.body.push({updated_at: newConv.updated_at,body: newConv.body});
-                        commonConv.body_text.push({updated_at: newConv.updated_at,body_text: newConv.body_text});
+                        commonConv[commonConv.length-1].body.push({updated_at: newConv.updated_at,body: newConv.body});
+                        commonConv[commonConv.length-1].body_text.push({updated_at: newConv.updated_at,body_text: newConv.body_text});
                     }
                     if(prevConvAttachment !== newConv.attachments){
-                        commonConv.attachments.push({updated_at: newConv.updated_at,attachments: newConv.attachments});
+                        commonConv[commonConv.length-1].attachments.push({updated_at: newConv.updated_at,attachments: newConv.attachments});
                     }
                     //delete processedId
                     finalConversations.push(commonConv)
+                    
                 }else{
                     console.debug("NEW CONVERSATION");
+                    
                     let body = newConv.body;
                     let body_text = newConv.body_text;
                     let attachments = newConv.attachments;
@@ -175,12 +170,14 @@ const saveTickets = (ticketData)=>{
                     newConv.body = [{updated_at: newConv.updated_at,body: body}]
                     newConv.body_text = [{updated_at: newConv.updated_at,body_text: body_text}]
                     newConv.attachments = [{updated_at: newConv.updated_at,attachments: attachments}]
-                    finalConversations.push(newConv)
+                    finalConversations.push(newConv);
                 }
             }
             console.debug("Final Conversations: ",finalConversations);
             ticketData.description = res.freshdesk_description;
             ticketData.description_text = res.freshdesk_description_text;
+            finalConversations = finalConversations.filter(element=>element.id !== undefined);
+            res.freshdesk_conversations = res.freshdesk_conversations.filter(element=>element.id !== undefined);
             if (finalConversations.length > 0){
                 console.log("New Conversations");
                 ticketData.conversations = res.freshdesk_conversations.concat(finalConversations);
@@ -231,16 +228,6 @@ const exec = (extra=null,date)=>{
                 console.error("List All Conversations");
                 console.error(err);
             })
-            // freshdesk.listAllConversations(ticket.id,(err,convData)=>{
-            //     if(!err){
-            //         // console.log(Object.keys(convData[0]));
-                    
-            //     }else{
-            //         console.error("List All Conversations");
-            //         console.error(err);
-            //     }                    
-            // })
-        
         });
         exec(extra,date);
     }else{
@@ -251,29 +238,27 @@ const exec = (extra=null,date)=>{
 }
 
 
-
-
-
-
-
-
-
-
-app.listen(PORT, function () {
-    console.log('server started at port : '+PORT);
+const MONGO_URI = 'mongodb://'+ dev.username + ':' + dev.password + '@' + dev.host + '/' + dev.db
+mongoose.connect(MONGO_URI,{
+  useNewUrlParser: true,
+    useUnifiedTopology:true
+})
+.then(()=>{
+    console.log("Connected to Database");
+    let upr = new Date();
+    upr.setTime(upr.getTime() - (5 * 60 * 1000));
+    date = upr.toISOString()
+    console.log("executing");
+    exec(null,date);
+    console.log("done");
+    return -1;
     
-    setInterval(()=>{
-     let upr = new Date();
-        
-     upr.setTime(upr.getTime() - (5 * 60 * 1000));
-     date = upr.toISOString()
-     console.log("executing");
-     exec(null,date);
-    },60000)
-    // exec(null,date);
-    // setTimeout(() => {
-//     let date = new Date();
-//     console.log('execute');
-    
-// }, 60000);
+}).catch(()=>{
+  console.error("Could not Connect to Database");
 });
+
+
+
+
+
+

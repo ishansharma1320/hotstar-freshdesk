@@ -14,6 +14,16 @@ const freshdesk = new Freshdesk('https://starstaging.freshdesk.com/','CncVtKH3Bw
 
 const createTicketObject = (ticketData,op)=>{
     let newTicket;
+    if (ticketData.conversations.length>0){
+        for(let i = 0;i<ticketData.conversations.length;i++){
+            if(ticketData.conversations[i].body_text.length>0){
+                let lastBodyTextIndex = ticketData.conversations[i].body_text.length-1;
+                ticketData.conversations[i].body_text_latest = ticketData.conversations[i].body_text[lastBodyTextIndex].body_text;
+            }else{
+                ticketData.conversations[i].body_text_latest = '';
+            }
+        }
+    }
     let commFields = {freshdesk_support_email: ticketData.support_email,
         freshdesk_source: ticketData.source,
         freshdesk_id: ticketData.id,

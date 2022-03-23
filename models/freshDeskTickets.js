@@ -56,6 +56,7 @@ var ticketSchema = new mongoose.Schema({
     freshdesk_conversations:[{
         body:[{updated_at: Date, body: String}],
         body_text:[{updated_at: Date, body_text: String}],
+        body_text_latest: String,
         id:Number,
         incoming:Boolean,
         private:Boolean,

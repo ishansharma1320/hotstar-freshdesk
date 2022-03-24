@@ -219,7 +219,7 @@ const saveTickets = (ticketData)=>{
 })
 
 }
-const exec = (extra=null,date)=>{
+const exec = (extra=null,date,dbConnection)=>{
     let page = undefined;
     let params = {"updated_since":date,'include': 'description,requester'}
     if(extra !== null){
@@ -247,7 +247,7 @@ const exec = (extra=null,date)=>{
                 console.error(err);
             })
         });
-        exec(extra,date);
+        exec(extra,date,dbConnection);
     }else{
         console.error(err);
     }
@@ -261,13 +261,14 @@ mongoose.connect(MONGO_URI,{
   useNewUrlParser: true,
     useUnifiedTopology:true
 })
-.then(()=>{
+.then((dbConnection)=>{
     console.log("Connected to Database");
+    
     let upr = new Date();
     upr.setTime(upr.getTime() - (5 * 60 * 1000));
     date = upr.toISOString()
     console.log("executing");
-    exec(null,date);
+    exec(null,date,dbConnection);
     console.log("done");
     return -1;
     

@@ -83,7 +83,18 @@ var ticketSchema = new mongoose.Schema({
         ticket_id:Number,
         source_additional_info:mongoose.Mixed,
         speaker: String,
-    }]
+    }],
+    present_phrases: [
+        {
+            conversation_id: Number,
+            category: String,
+            phrase: String,
+            startTime: Number,
+            phrasesType: String,
+            is_agent: Boolean,
+            speaker:String
+        }
+    ]
 });
 
 // ticketSchema.index({ start_at: 1 });

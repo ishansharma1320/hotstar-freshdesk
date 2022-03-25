@@ -1,0 +1,10 @@
+{ 
+	"_id" : "hotstar",
+	"data" : [
+		{"phrases":"Yactraq","category":"greeting","phrasesType": "greeting","speaker":"left"},
+		{"phrases":"Test","category":"greeting","phrasesType": "greeting","speaker":"right"},
+		{"phrases":"on","category":"greeting","phrasesType": "greeting","speaker":"left"},
+		{"phrases":"Creating","category":"greeting","phrasesType": "greeting","speaker":"right"},
+		{"phrases":"Notes","category":"politeness","phrasesType": "greeting","speaker":"left"}
+	]
+}

@@ -5,6 +5,7 @@ var phrasesList_DB = require('./models/CustomCatPhrase.js');
 var ProcessCallsUnwindData = require('./models/ProcessCallsUnwindData.js');
 var CategoryRankingData = require('./models/AgentRanking_auto.js');
 // var AgentRankingScore = require('./server/models/AgentRankingScore_auto.js');
+const Ticket = require('./models/freshDeskTickets');
 var process = require('process');
  _ = require('lodash');
 var fs = require('fs');
@@ -64,7 +65,7 @@ function test(callids, callback)
 
 function queueAndWait(cb){
 var matchQueryObj = {
-    call_id:{$in: callids},
+    freshdesk_id:{$in: callids},
 // 'transcript.speaker': transcriptspeaker,
     'freshdesk_conversations.body_text_latest': {
         $regex: new RegExp("(^|\\W)"+phrases+"($|\\W)"),
@@ -74,8 +75,8 @@ var matchQueryObj = {
     if(speaker == "left" || speaker == "right"){
         matchQueryObj["freshdesk_conversations.speaker"] = transcriptspeaker; 
     }
-
-                ProcessedCall.aggregate([{
+    // console.log("matchQueryObject",matchQueryObj);
+                Ticket.aggregate([{
                         "$unwind": "$freshdesk_conversations"
                     },
                     {
@@ -90,43 +91,41 @@ var matchQueryObj = {
                         }
                     }
                 ], function(err, docs) {
-                    console.log("here",docs);
+                    // console.log("Result from Aggregate Query",docs);
                     if(docs)
                     for (let doc of docs) {
                         var pushObj = { "present_phrases": {
                             category: category,
                             phrase: phrases,
                             phrasesType: phrasesType,
-                            // startTime: Number(doc._id.startTime)
+                            startTime: Number(doc._id.updated_at)
                         }
                     }
                         if(speaker == "left" || speaker == "right"){
                             pushObj["present_phrases"]["speaker"] = speaker; 
                         }
                     console.log(pushObj)
-                      ProcessedCall.findOneAndUpdate({
+                      Ticket.findOneAndUpdate({
                             "_id": doc.id
                         }, {
                             "$push": pushObj
                         }, function(err, data) {
                             console.log("data",data);
+                        
                             var final_Object = {
                                 account_id : account_id,
                                 user_name: account_id,
-                                ticket_id: data.ticket_id,
-                                call_id: data.call_id,
-                                contact_phone_number: data.contact_phone_number,
-                                agent_name: data.agent_name,
+                                conversation_id: doc._id.id,
+                                ticket_id: data.freshdesk_id,
+                                
                                 start_at: data.start_at,
-                                riskFlag: data.riskFlag,
-                                total_time: data.total_time,
                                 category: phrasesType,
                                 // speaker:speaker,
                                 present_phrases: [{
                                     category: category,
                                     phrase: phrases,
                                     phrasesType: phrasesType,
-                                    startTime: Number(doc._id.startTime)
+                                    startTime: Number(data.start_at)
 				    // speaker:speaker
                                 }]
                             }
@@ -135,7 +134,10 @@ var matchQueryObj = {
                                 final_Object["speaker"] = speaker;
                                 final_Object.present_phrases[0]["speaker"] = speaker;
                             }
-			//	console.log(final_Object, doc)
+                            // console.log("finalObject ", final_Object);
+                            console.log("Doc",doc);
+				            // process.exit(1);  
+                            // console.log(final_Object, doc)
                               processCallsUnwind(final_Object, "UPDATE");
 
                         });
@@ -150,8 +152,9 @@ var matchQueryObj = {
             queueAndWait(callback);
 }
 
-ProcessedCall.distinct('call_id',{account_id: message.account_id}, function(err, data){
+Ticket.distinct('freshdesk_id',{account_id: message.account_id}, function(err, data){
     var chunk = [];
+    // console.log("Distinct Tickets",data);
     while (data.length > 0) {
     chunk.push(data.splice(0,1000))
     }
@@ -196,7 +199,7 @@ async.eachSeries(chunk,function(b, cb){
         var phrases = message.phrases || "";
         var phrasesType = message.phrasesType || "";
         try{
-                ProcessedCall.update({
+                Ticket.update({
                     account_id: message.account_id,
                     present_phrases: {
                         $elemMatch: {
@@ -232,7 +235,7 @@ async.eachSeries(chunk,function(b, cb){
                             }, {
                     multi: true
                 }, function(err) {
-            ProcessedCall.distinct('call_id',{account_id: message.account_id}, function(err, data){
+            Ticket.distinct('ticket_id',{account_id: message.account_id}, function(err, data){
                                 storeCategoryRankingData(data,message.account_id, phrasesType, function(vvv){
 					channel.ack(msg);
                                         //cb();
@@ -271,9 +274,9 @@ async.eachSeries(chunk,function(b, cb){
 
 function storeCategoryRankingData(callids, account_id, phrasesType, ccb){
     // console.log(callids,account_id,phrasesType)
-    ProcessedCall.find({
+    Ticket.find({
         'account_id': account_id,
-        'call_id':{$in: callids}
+        'ticket_id':{$in: callids}
     }, {
         transcript: 0,
         data: 0
@@ -330,11 +333,8 @@ function storeCategoryRankingData(callids, account_id, phrasesType, ccb){
     });
 }
 function processCallsUnwind(final_Object, method){
-    if(final_Object.present_phrases.length > 0){
-        for(let i = 0;i<final_Object.present_phrases.length;i++){
-            final_Object.present_phrases[i].startTime = 1;
-        }
-    }
+    console.log(final_Object);
+    // process.exit(1);
     if(method == "UPDATE"){
        var final_result =  new ProcessCallsUnwindData(final_Object);
        final_result.save(function(err, mongoRes) {

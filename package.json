@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.8.0",
     "axios": "^0.26.1",
     "bluebird": "^3.7.2",
     "express": "^4.17.3",
     "freshdesk-api": "^2.15.0",
     "lodash": "^4.17.21",
     "mongoose": "^6.2.6",
+    "optimist": "^0.6.1",
+    "underscore": "^1.13.2",
     "unirest": "^0.6.0"
   }
 }

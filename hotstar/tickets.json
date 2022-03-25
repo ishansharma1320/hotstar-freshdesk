@@ -1,0 +1,1338 @@
+{
+	"_id": {
+		"$oid": "623b2f00ed6324ce7cf018ef"
+	},
+	"freshdesk_support_email": null,
+	"freshdesk_source": "2",
+	"freshdesk_created_at": {
+		"$date": "2022-03-23T10:52:11.000Z"
+	},
+	"freshdesk_updated_at": {
+		"$date": "2022-03-23T15:46:11.000Z"
+	},
+	"freshdesk_to_emails": null,
+	"freshdesk_cc_emails": [
+		"yogesh@yactraq.com"
+	],
+	"freshdesk_attachments": [],
+	"freshdesk_priority": 2,
+	"freshdesk_status": 2,
+	"freshdesk_fwd_emails": [],
+	"freshdesk_reply_cc_emails": [
+		"yogesh@yactraq.com"
+	],
+	"freshdesk_ticket_cc_emails": [
+		"yogesh@yactraq.com"
+	],
+	"freshdesk_email_config_id": null,
+	"freshdesk_group_id": null,
+	"freshdesk_requester_id": 6.201171255e+10,
+	"freshdesk_responder_id": null,
+	"freshdesk_spam": false,
+	"freshdesk_subject": "Yactraq Test...",
+	"freshdesk_company_id": null,
+	"freshdesk_id": 821133,
+	"freshdesk_type": null,
+	"freshdesk_product_id": null,
+	"freshdesk_due_by": {
+		"$date": "2022-03-24T10:52:18.000Z"
+	},
+	"freshdesk_fr_due_by": {
+		"$date": "2022-03-24T04:52:18.000Z"
+	},
+	"freshdesk_is_escalated": false,
+	"freshdesk_association_type": null,
+	"freshdesk_description_text": [
+		{
+			"updated_at": {
+				"$date": "2022-03-23T14:27:05.000Z"
+			},
+			"description_text": "Yactraq Ingestion Test...",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf018f0"
+			}
+		}
+	],
+	"freshdesk_description": [
+		{
+			"updated_at": {
+				"$date": "2022-03-23T14:27:05.000Z"
+			},
+			"description": "\u003cdiv\u003eYactraq Ingestion Test...\u003c/div\u003e",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf018f1"
+			}
+		}
+	],
+	"freshdesk_custom_fields": {
+		"cf_orgin": null,
+		"cf_category": null,
+		"cf_subcategory": null,
+		"cf_dpo": null,
+		"cf_show_names": null,
+		"cf_product_list": null,
+		"cf_business": null,
+		"cf_twitter_handle_id": null,
+		"cf_origin": null,
+		"cf_cc_digits_customer_shared": null,
+		"cf_email_id": null,
+		"cf_type_category": null,
+		"cf_lazy_linking_id": null,
+		"cf_sprinklr_channel_type": null,
+		"cf_qc_source": null,
+		"cf_lang": null,
+		"cf_hid_to_be_deleted": null,
+		"cf_txn_date": null,
+		"cf_qc_status": null,
+		"cf_pyi_title": null,
+		"cf_agent_id": null,
+		"cf_pyi_date_field": null,
+		"cf_note_id": null,
+		"cf_qc_approved_count": null,
+		"cf_sea_phone": null,
+		"cf_qc_modified_count": null,
+		"cf_qc_rejected_count": null,
+		"cf_requester_name": "Ishan",
+		"cf_source_type": null,
+		"cf_qc_records": null,
+		"cf_qc_done": false,
+		"cf_group_id": null,
+		"cf_is_middleware_processing": null,
+		"cf_subscription_info": null,
+		"cf_subscription_type": "No Sub",
+		"cf_subscription_region": null,
+		"cf_payment_gateway": null,
+		"cf_action": "AUTOCLOSE",
+		"cf_payment_gateway_id": null,
+		"cf_charge_id": null,
+		"cf_refund_amount": null,
+		"cf_refund_history": null,
+		"cf_currency_type": null,
+		"cf_refund_processed": null,
+		"cf_send_csat": false,
+		"cf_sub_bulk_sent": false,
+		"cf_reopened_canned_response_id": null,
+		"cf_subject_updated": false,
+		"cf_subscription_change_info": null,
+		"cf_hotstar_account_deleted": null,
+		"cf_sentiment": null,
+		"cf_sub_sub_category": null,
+		"cf_hotstar_resolution_notes": null,
+		"cf_no_csat": false,
+		"cf_auto_close_updates": null,
+		"cf_ml_api_executed": "Yes",
+		"cf_dsat_status": null,
+		"cf_new_ml_action": null,
+		"cf_new_ml_prediction": null,
+		"cf_previous_ticket_id": null,
+		"cf_ticket_action": null,
+		"cf_trends": null,
+		"cf_closed_as_duplicate": null,
+		"cf_subscription_updated_by_agent": null,
+		"cf_attachment_present": null,
+		"cf_subscription_updated_agent": null,
+		"cf_voc": null,
+		"cf_primary_ticket": null,
+		"cf_sprinklr_case_number": null,
+		"cf_first_name": null,
+		"cf_last_name": null,
+		"cf_mode_of_payment": null,
+		"cf_card_details": null,
+		"cf_is_attached": false,
+		"cf_hid": null,
+		"cf_has_attachment": "No",
+		"cf_pnl_migration_status": null,
+		"cf_pnl_migration_reject_reason": null,
+		"cf_malayl1": null,
+		"cf_malayl2": null,
+		"cf_malayl3": null,
+		"cf_escalation_type": null,
+		"cf_1st_level": null,
+		"cf_2nd_level": null,
+		"cf_3rd_level": null,
+		"cf_response_from_ml": "action: AUTOCLOSE Prediction:",
+		"cf_refund_reason": null,
+		"cf_transaction_id": null,
+		"cf_premium_tickets_closed": null,
+		"cf_thaipre_launch_level_1": null,
+		"cf_thaipre_launch_level_2": null,
+		"cf_thaipre_launch_level_3": null,
+		"cf_tagging_notes": null,
+		"cf_thai_level_1": null,
+		"cf_thai_level_2": null,
+		"cf_thai_level_3": null,
+		"cf_us_transaction_mode": null,
+		"cf_us_transaction_id_sherlock": null,
+		"cf_us_transaction_type": null,
+		"cf_us_pack_name": null,
+		"cf_us_partner_name": null,
+		"cf_us_payment_mode": null,
+		"cf_us_expiry_date": null,
+		"cf_survey_results": null,
+		"cf_auto_us_refund": null,
+		"cf_content_name": null,
+		"cf_us_payment_type": null,
+		"cf_signup_region": "None",
+		"cf_sub_api_count": null,
+		"cf_refund_verified": null,
+		"cf_original_invoice_amount994909": null,
+		"cf_subscribed_email_id": null,
+		"cf_user_type_for_resending_email": null,
+		"cf_refund_months": null,
+		"cf_recharge_partner": null,
+		"cf_no_of_tickets_created_in_7_days": 10,
+		"cf_additional_information": "Don't Send Bulk",
+		"cf_no_of_interactions": 12,
+		"cf_jira_number": null
+	},
+	"freshdesk_tags": [
+		"AUTOCLOSE"
+	],
+	"freshdesk_nr_due_by": null,
+	"freshdesk_nr_escalated": false,
+	"freshdesk_conversations": [
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T10:52:40.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes 7\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018f3"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T10:52:40.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes 7",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018f4"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes 7",
+			"id": 6.2029273495e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T10:52:40.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T10:52:40.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T10:52:40.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018f5"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf018f2"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T10:55:48.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018f7"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T10:55:48.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018f8"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029273574e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T10:55:48.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T10:55:48.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T10:55:48.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018f9"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf018f6"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:15:44.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018fb"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:15:44.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018fc"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029278413e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:15:44.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:15:44.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:15:44.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018fd"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf018fa"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:22:02.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf018ff"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:22:02.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01900"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.202927875e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:22:02.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:22:02.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:22:02.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01901"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf018fe"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:34:34.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01903"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:34:34.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01904"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029279378e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:34:34.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:34:34.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:34:34.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01905"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf01902"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:39:14.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01907"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:39:14.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01908"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029279628e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:39:14.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:39:14.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:39:14.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01909"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf01906"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:43:27.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0190b"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:43:27.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0190c"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029279865e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:43:27.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:43:27.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:43:27.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0190d"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf0190a"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:51:11.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0190f"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:51:11.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01910"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029280295e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:51:11.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:51:11.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:51:11.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01911"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf0190e"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:52:49.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01913"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:52:49.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01914"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029280376e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:52:49.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:52:49.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:52:49.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01915"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf01912"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:59:10.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01917"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:59:10.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01918"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029280744e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T13:59:10.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T13:59:10.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T13:59:10.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01919"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf01916"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:05:49.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0191b"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:05:49.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0191c"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029281119e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T14:05:49.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T14:05:49.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:05:49.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0191d"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf0191a"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:11:06.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf0191f"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:11:06.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01920"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029281431e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T14:11:06.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T14:11:06.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:11:06.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01921"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf0191e"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:16:49.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01923"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:16:49.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01924"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.202928176e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T14:16:49.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T14:16:49.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:16:49.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01925"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf01922"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:27:05.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01927"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:27:05.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01928"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029282325e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T14:27:05.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T14:27:05.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:27:05.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f00ed6324ce7cf01929"
+					}
+				},
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:27:05.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b2f60a826bc43dd3a2448"
+					}
+				},
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:27:05.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b30788e743b561c54689f"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b2f00ed6324ce7cf01926"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:36:34.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b30788e743b561c5468dd"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:36:34.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b30788e743b561c5468de"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029282868e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T14:36:34.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T14:36:34.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:36:34.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b30788e743b561c5468df"
+					}
+				},
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:36:34.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b30e7e34fe97446f56394"
+					}
+				},
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:36:34.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b3167be2ad0bbebbd94fe"
+					}
+				},
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:36:34.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b319053e353ad22ddd58e"
+					}
+				},
+				{
+					"updated_at": {
+						"$date": "2022-03-23T14:36:34.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b40ca2419a10c636133e5"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b30788e743b561c5468dc"
+			}
+		},
+		{
+			"body": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T15:46:11.000Z"
+					},
+					"body": "\u003cdiv\u003eYactraq Test on Creating Notes\u003c/div\u003e",
+					"_id": {
+						"$oid": "623b40ca2419a10c6361342b"
+					}
+				}
+			],
+			"body_text": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T15:46:11.000Z"
+					},
+					"body_text": "Yactraq Test on Creating Notes",
+					"_id": {
+						"$oid": "623b40ca2419a10c6361342c"
+					}
+				}
+			],
+			"body_text_latest": "Yactraq Test on Creating Notes",
+			"id": 6.2029286512e+10,
+			"incoming": false,
+			"private": true,
+			"user_id": 6.2011595269e+10,
+			"support_email": null,
+			"source": 2,
+			"category": 2,
+			"to_emails": [],
+			"from_email": null,
+			"cc_emails": [],
+			"bcc_emails": null,
+			"email_failure_count": null,
+			"outgoing_failures": null,
+			"thread_id": null,
+			"thread_message_id": null,
+			"created_at": {
+				"$date": "2022-03-23T15:46:11.000Z"
+			},
+			"updated_at": {
+				"$date": "2022-03-23T15:46:11.000Z"
+			},
+			"last_edited_at": null,
+			"last_edited_user_id": null,
+			"attachments": [
+				{
+					"updated_at": {
+						"$date": "2022-03-23T15:46:11.000Z"
+					},
+					"attachments": [],
+					"_id": {
+						"$oid": "623b40ca2419a10c6361342d"
+					}
+				}
+			],
+			"automation_id": null,
+			"automation_type_id": null,
+			"auto_response": false,
+			"ticket_id": 821133,
+			"source_additional_info": null,
+			"speaker": "left",
+			"_id": {
+				"$oid": "623b40ca2419a10c6361342a"
+			}
+		}
+	],
+	"__v": 0
+}

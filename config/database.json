@@ -4,6 +4,7 @@
         "username": "ishan",
         "password": "omnitraq",
         "db": "hotstar",
-        "port": "3003"
+        "port": "3003",
+        "queueName":"phraseActionQueue"
       }
 }

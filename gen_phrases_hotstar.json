@@ -1,0 +1,15 @@
+{ 
+	"_id" : "hotstar",
+	"data" : [
+		{"phrases":"welcome to","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"good morning","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"good afternoon","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"good evening","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"thank you for calling","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"thanks for calling","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"how can i help you","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"what can i do for you","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"what can i help you with","category":"greeting","phrasesType": "greeting"},
+		{"phrases":"we are happy to","category":"politeness","phrasesType": "greeting"}
+	]
+}
